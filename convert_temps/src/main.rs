@@ -7,7 +7,7 @@ fn main() {
     println!("{}", result)
 }
 
-fn get_user_input(message: &String) -> String {
+fn get_user_input(message: &str) -> String {
     println!("{}", message);
     let mut input = String::new();
     io::stdin()
@@ -17,15 +17,13 @@ fn get_user_input(message: &String) -> String {
 }
 
 fn get_convert_direction() -> u32 {
-    let message = String::from("Are you converting from: [1] F to C, or [2] C to F?");
-    let answer = get_user_input(&message);
+    let answer = get_user_input("Are you converting from: [1] F to C, or [2] C to F?");
     let answer: u32 = answer.trim().parse().expect("Please input a number");
     return answer;
 }
 
 fn get_value_to_convert() -> f64 {
-    let message = String::from("Enter value to be converted:");
-    let value = get_user_input(&message);
+    let value = get_user_input("Enter value to be converted:");
     let value: f64 = value.trim().parse().expect("Please input a number");
     return value;
 }
