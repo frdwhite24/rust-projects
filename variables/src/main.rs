@@ -20,7 +20,6 @@ fn main() {
     let a_string = String::from("hello");
     let mut another_string = a_string.clone();
     another_string.push_str(" world");
-
     println!("{}", a_string);
     println!("{}", another_string);
 
